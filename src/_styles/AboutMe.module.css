@@ -12,10 +12,6 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-
-  /* use below css if content is long and need to be scrolled */
-  /* margin-top: 64px; */
-  /* margin: 64px auto 8px auto; */
 }
 
 .title {
