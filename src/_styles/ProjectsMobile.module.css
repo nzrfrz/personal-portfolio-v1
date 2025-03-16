@@ -1,0 +1,110 @@
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 32px;
+  gap: 48px;
+}
+
+.projectWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pojectThumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 360px;
+  max-height: auto;
+  margin-bottom: 16px;
+}
+
+.pojectThumbPortrait {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  max-width: 150px;
+  max-height: auto;
+  margin-bottom: 16px;
+}
+
+.pojectThumb > img,
+.pojectThumbPortrait > img {
+  border-radius: 8px;
+}
+
+.projectContentWrapper {
+  position: relative;
+  z-index: 1;
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.projectTitleWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.projectTitleWrapper > div:nth-child(3) {
+  color: #067481;
+  cursor: pointer;
+}
+
+.projectTitleWrapper > div:nth-child(4) {
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+}
+
+.projectName {
+  font-size: 20px;
+  font-weight: 600;
+  color: #08fdd8;
+  transition: 0.4s;
+}
+
+.projectName:hover {
+  scale: 1.03;
+}
+
+.descriptionWrapper {
+  font-size: 14px;
+  font-weight: 200;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: rgba(51, 65, 85, 0.5);
+}
+
+.techStackWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.techStackCapsuleWrapper {
+  content: "";
+}
+
+.techStackCapsule {
+  display: flex;
+  padding: .25rem .75rem;
+  border-radius: 9999px;
+  font-size: .75rem;
+  font-weight: 400;
+  color: rgb(94, 234, 212);
+  background-color: rgba(94, 234, 212, .4);
+  transition: 0.4s;
+}
+
+.techStackCapsule:hover {
+  scale: 1.01;
+  color: gold;
+  box-shadow: 0 0 3px gold, 0 0 4px gold, 0 0 7px gold;
+}

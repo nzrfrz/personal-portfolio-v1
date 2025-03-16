@@ -1,0 +1,166 @@
+.container {
+  position: absolute;
+  z-index: 7;
+  /* left: 16px; */
+  padding: 16px;
+  width: 100vw;
+  /* background-color: rgba(255, 215, 0, 0.9); */
+  /* background-color: red; */
+  /* -webkit-box-shadow: 0px 5px 10px 0px rgba(163, 163, 163, 0.7);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(163, 163, 163, 0.7);
+  box-shadow: 0px 5px 10px 0px rgba(163, 163, 163, 0.7); */
+}
+
+.navLinkContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.navLinkWrapper {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.navLink,
+.activeNavLink {
+  display: inline-block;
+  position: relative;
+  padding: 0px 8px;
+}
+
+.navLink>div:nth-child(2) {
+  content: '';
+  background-image: linear-gradient(to right,
+      #CCD6F6,
+      #CCD6F6 50%,
+      #067481 50%);
+  background-size: 200% 100%;
+  background-position: 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.navlinkUnderlined {
+  content: '';
+  position: absolute;
+  opacity: 0;
+  height: 2.5px;
+  left: 50%;
+  bottom: 0;
+  border-radius: 50px;
+  background-color: #067481;
+}
+
+.activeNavLink>div:nth-child(2) {
+  color: #067481;
+  font-weight: 700;
+  animation: textGlow 1s ease-in-out infinite alternate;
+}
+
+/*
+.container {
+  position: relative;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  padding: 0px 32px 0px 32px;
+  background-color: transparent;
+}
+
+.navHeaderContent {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.navLinkContainer {
+  display: flex;
+  gap: 16px;
+}
+
+.navLinkWrapper {
+  cursor: pointer;
+  display: flex;
+}
+
+.navLink,
+.activeNavLink {
+  display: inline-block;
+  position: relative;
+  padding: 0px 8px;
+}
+
+.navLabel {
+  content: "";
+  font-size: 18px;
+}
+*/
+
+/* active navlink 
+.activeNavLink > .navLabel {
+  color: #067481;
+  font-weight: 400;
+  animation: textGlow 1s ease-in-out infinite alternate;
+}
+
+.activeNavLink::after {
+  content: '';
+  opacity: 1;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  background-color: #067481;
+  animation: bgGlow 1.5s infinite alternate;
+}
+*/
+/* active navlink */
+
+/* .navLinkWrapper:hover {
+  color: #067481;
+  transition: all 0.3s cubic-bezier(0.37, 0, 0.63, 1);
+}
+
+.navLink::after {
+  content: '';
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  left: 0;
+  border-radius: 50px;
+  background-color: #067481;
+  transition: all 0.3s cubic-bezier(0.37, 0, 0.63, 1);
+}
+
+.navLink:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
+  transform-origin: bottom center;
+} */
+
+@keyframes textGlow {
+  0% {
+    text-shadow: 0 0 5px #08fdd8;
+  }
+
+  100% {
+    text-shadow: 0 0 5px #00d4ff, 0 0 10px #00d4ff;
+  }
+}
+
+@keyframes bgGlow {
+  0% {
+    box-shadow: 0 0 5px #08fdd8;
+  }
+
+  100% {
+    box-shadow: 0 0 10px #00d4ff, 0 0 10px #00d4ff;
+  }
+}

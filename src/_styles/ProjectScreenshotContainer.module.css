@@ -1,0 +1,80 @@
+.container {
+  position: absolute;
+  z-index: 11;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 16px;
+  right: 32px;
+  z-index: 12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  background-color: #067481;
+  box-shadow: 0 0 5px gold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.closeBtn:active {
+  scale: 0.9;
+}
+
+.mySwiper {
+  content: "";
+  /* background-color: red; */
+}
+
+.mySwiperSlider {
+  max-width: 640px;
+  max-height: 360px;
+  padding: 20px 0px;
+}
+
+.mySwiperPortrait {
+  max-width: 350px;
+}
+
+.mySwiperSliderPortrait {
+  padding: 16px 56px;
+  /* background-color: gold; */
+}
+
+.mySwiperSlider img,
+.mySwiperSliderPortrait img {
+  width: 100%;
+}
+
+.mySwiperVertical {
+  content: "";
+  width: 640px;
+  height: 360px;
+}
+
+.mySwiperSliderVertical {
+  width: 640px;
+  height: 360px;
+}
+
+.mySwiperSliderVertical > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 650px) {
+  .closeBtn {
+    right: 16px;
+  }
+}

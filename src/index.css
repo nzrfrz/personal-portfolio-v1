@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  font-family: Poppins;
+  font-weight: 300;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  box-sizing: border-box;
+  position: fixed;
+  inset: 0;
+  background-color: #0f172a;
+}
+
+/* ---------- scroll bar ---------- */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9aacb3;
+  border-radius: 10px;
+}
+
+/* ---------- scroll bar ---------- */
+
+.stars-bg {
+  background: url(./assets/stars-bg.png);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 0;
+  transform: rotateX(180deg);
+}
+
+.stars-bg-twinkling {
+  background: transparent url(./assets/twinkling-custom.png) repeat top center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 4;
+  -moz-animation: move-background 300s linear infinite;
+  -ms-animation: move-background 300s linear infinite;
+  -o-animation: move-background 300s linear infinite;
+  -webkit-animation: move-background 300s linear infinite;
+  animation: move-background 300s infinite alternate;
+}
+
+.moving-clouds {
+  width: 100%;
+  background: url(./assets/clouds-bg.png) repeat;
+  background-position: 0 0;
+  opacity: var(--opacity);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  opacity: 0.45;
+  -moz-animation: move-background 600s linear infinite;
+  -ms-animation: move-background 600s linear infinite;
+  -o-animation: move-background 600s linear infinite;
+  -webkit-animation: move-background 600s linear infinite;
+  animation: move-background 600s linear infinite;
+}
+
+div.swiper-button-prev.swiper-button-disabled,
+div.swiper-button-next.swiper-button-disabled {
+  /* color: #08fdd8; */
+  /* color: gold; */
+  color: cyan;
+  text-shadow: 0 0 3px transparent, 0 0 4px transparent, 0 0 7px transparent;
+}
+
+div.swiper-button-next,
+div.swiper-button-prev {
+  /* color: #08fdd8; */
+  /* color: gold; */
+  /* color: #067481; */
+  color: cyan;
+  text-shadow: 0 0 3px #067481, 0 0 4px #067481, 0 0 7px #067481;
+}
+
+div.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0;
+}
+
+div.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet,
+div.swiper-pagination.swiper-pagination-bullets.swiper-pagination-vertical > span.swiper-pagination-bullet {
+  background: cyan;
+}
+
+div.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active,
+div.swiper-pagination.swiper-pagination-bullets.swiper-pagination-vertical > span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: cyan;
+  box-shadow: 0 0 3px #067481, 0 0 4px #067481, 0 0 7px #067481;
+}
+
+/*#region ---------- twinkling animation ---------- */
+@keyframes move-background {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 10000px 0;
+  }
+}
+
+@-webkit-keyframes move-background {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 10000px 0;
+  }
+}
+
+@-moz-keyframes move-background {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 10000px 0;
+  }
+}
+
+@-webkit-keyframes move-background {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 10000px 0;
+  }
+}
+
+/*#endregion ---------- twinkling animation ---------- */
