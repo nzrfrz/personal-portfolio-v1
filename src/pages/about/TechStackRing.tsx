@@ -11,7 +11,7 @@ import {
   SiExpo
 } from "react-icons/si";
 import { FaFigma } from "react-icons/fa6";
-import styles from "../../_styles/AboutMe.module.css";
+import styles from "../../_styles/Aboutme.module.css";
 
 import { useTechStackRingAnim } from "../../animation";
 
